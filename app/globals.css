@@ -1,0 +1,62 @@
+/* app/globals.css — TechPro Haiti */
+/* Style Online School : navy foncé, orange vif, typographie très bold */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy:        #1B3A6B;
+  --navy-dark:   #0D1F3C;
+  --navy-deeper: #081428;
+  --orange:      #FF6B35;
+  --orange-pale: #FFF0EA;
+  --bleu-clair:  #3B82F6;
+  --jaune:       #FFD700;
+  --gris:        #64748B;
+  --gris-clair:  #F1F5F9;
+  --bordure:     #E2E8F0;
+  --texte:       #0D1F2D;
+  --blanc:       #FFFFFF;
+
+  --tenant-primaire:   #1B3A6B;
+  --tenant-secondaire: #FF6B35;
+  --tenant-accent:     #FFF0EA;
+
+  --nav-h: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0;
+  background: #F8FAFB;
+  color: var(--texte);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+h1, h2, h3, h4 {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0;
+  line-height: 1.1;
+}
+p { margin: 0; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 2px; }
+
+:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+
+@media (max-width: 768px) {
+  .idea-nav-links { display: none !important; }
+  .idea-burger    { display: flex !important; }
+}
+
+::selection { background: var(--orange); color: white; }
+button, a { transition: opacity 0.15s, transform 0.15s; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
