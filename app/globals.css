@@ -1,0 +1,67 @@
+/* app/globals.css — MediForm Haiti */
+/* Style médical propre : blanc, vert médical, bleu, typographie Inter */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vert:        #1B6B45;
+  --vert-clair:  #27AE73;
+  --vert-pale:   #E8F5ED;
+  --bleu:        #1E5FA8;
+  --bleu-pale:   #EBF3FB;
+  --gris:        #64748B;
+  --gris-clair:  #F1F5F9;
+  --bordure:     #E2E8F0;
+  --texte:       #0D1F2D;
+  --blanc:       #FFFFFF;
+
+  /* Variables tenant (surchargées dynamiquement) */
+  --tenant-primaire:   #1B6B45;
+  --tenant-secondaire: #1E5FA8;
+  --tenant-accent:     #E8F5ED;
+
+  --nav-h: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; padding: 0;
+  background: #F8FAFB;
+  color: var(--texte);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+h1,h2,h3,h4 {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.25;
+}
+p { margin: 0; }
+
+/* Scrollbar fine */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bordure); border-radius: 2px; }
+
+/* Focus accessible */
+:focus-visible { outline: 2px solid var(--vert); outline-offset: 2px; }
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .idea-nav-links { display: none !important; }
+  .idea-burger    { display: flex !important; }
+}
+
+/* Sélection de texte */
+::selection { background: var(--vert); color: white; }
+
+/* Transitions */
+button, a { transition: opacity 0.15s, transform 0.15s; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
